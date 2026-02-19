@@ -20,7 +20,7 @@ export default function Team() {
         },
         {
             name: "PRASANTH K",
-            quote: "Defining the ReMatch protocol to bridge global food supply and demand.",
+            quote: "Defining the SevaNetz Protocol to bridge global food supply and demand.",
             image: prasanthImg,
             color: "border-secondary/20"
         },
@@ -56,17 +56,17 @@ export default function Team() {
                         {"The Minds Behind SevaNetz".split(" ").map((word, i) => (
                             <span key={i} className="inline-block mr-2">
                                 {word.split("").map((char, j) => (
-                                    <motion.span 
-                                        key={j} 
-                                        variants={{ 
-                                            hidden: { opacity: 0, y: 10 }, 
-                                            show: { 
-                                                opacity: 1, 
+                                    <motion.span
+                                        key={j}
+                                        variants={{
+                                            hidden: { opacity: 0, y: 10 },
+                                            show: {
+                                                opacity: 1,
                                                 y: 0,
                                                 transition: {
                                                     duration: 0.3
                                                 }
-                                            } 
+                                            }
                                         }}
                                     >
                                         {char}
@@ -76,7 +76,7 @@ export default function Team() {
                         ))}
                     </motion.h2>
                     <p className="text-lg text-slate-600">
-                        A diverse collective of engineers, designers, and visionaries committed to redefining the future of SevaNetz through the SevaMatch protocol.
+                        A diverse collective of engineers, designers, and visionaries committed to redefining the future of SevaNetz through the SevaNetz Protocol.
                     </p>
                 </div>
 
@@ -96,20 +96,21 @@ export default function Team() {
                     {members.map((member, i) => (
                         <motion.div
                             key={i}
+                            className="flex"
                             variants={{
                                 hidden: { opacity: 0, y: 30, scale: 0.95 },
-                                show: { 
-                                    opacity: 1, 
-                                    y: 0, 
+                                show: {
+                                    opacity: 1,
+                                    y: 0,
                                     scale: 1,
                                     transition: {
-                                        duration: 0.8, 
+                                        duration: 0.8,
                                         ease: [0.16, 1, 0.3, 1]
                                     }
                                 }
                             }}
                         >
-                            <Card className={`group relative p-0 overflow-hidden rounded-[2.5rem] bg-white border ${member.color} hover:shadow-2xl transition-all duration-500 hover:-translate-y-2`}>
+                            <Card className={`group relative p-0 overflow-hidden rounded-[2.5rem] bg-white border ${member.color} hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full w-full`}>
                                 <div className="p-8 pb-0 flex justify-center">
                                     <div className="relative">
                                         <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl scale-125 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -121,17 +122,19 @@ export default function Team() {
                                     </div>
                                 </div>
 
-                                <div className="p-8 text-center">
-                                    <h3 className="text-xl font-bold text-slate-900 mb-4">{member.name}</h3>
-                                    <p className="text-slate-500 text-sm leading-relaxed mb-6 italic">
-                                        "{member.quote}"
-                                    </p>
+                                <div className="p-8 text-center flex-1 flex flex-col justify-between">
+                                    <div className="mb-6">
+                                        <h3 className="text-xl font-bold text-slate-900 mb-4">{member.name}</h3>
+                                        <p className="text-slate-500 text-sm leading-relaxed italic">
+                                            "{member.quote}"
+                                        </p>
+                                    </div>
 
-                                    <div className="flex justify-center gap-4 opacity-40 group-hover:opacity-100 transition-opacity">
+                                    <div className="flex justify-center gap-4 opacity-40 group-hover:opacity-100 transition-opacity mt-auto">
                                         <motion.a whileHover={{ y: -3, color: "#2D5A27" }} href="#" className="text-slate-400">
                                             <Linkedin size={20} />
                                         </motion.a>
-                                        <motion.a whileHover={{ y: -3, color: "#2D5A27" }} href="#" className="text-slate-400">
+                                        <motion.a whileHover={{ y: -3, color: "#2D5A27" }} href="mailto:preeaacharya@iee.org" className="text-slate-400">
                                             <Mail size={20} />
                                         </motion.a>
                                     </div>

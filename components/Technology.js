@@ -48,7 +48,7 @@ export default function Technology() {
                         ))}
                     </motion.h2>
                     <p className="text-lg opacity-80">
-                        Our vision is powered by the <span className="text-secondary font-bold underline decoration-2 underline-offset-4">SevaMatch Protocol</span>—leveraging <span className="font-bold text-white">Computer Vision</span> for nutrient analysis and <span className="font-bold text-white">Autonomous Matching</span> for friction-less redistribution.
+                        Our vision is powered by the <span className="text-secondary font-bold underline decoration-2 underline-offset-4">SevaNetz Protocol</span>—leveraging <span className="font-bold text-white">Computer Vision</span> for nutrient analysis and <span className="font-bold text-white">Autonomous Matching</span> for friction-less redistribution.
                     </p>
                 </div>
 

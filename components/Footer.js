@@ -29,7 +29,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-slate-900 font-bold mb-8 uppercase tracking-widest text-xs">The Protocol</h4>
+                        <h4 className="text-slate-900 font-bold mb-8 uppercase tracking-widest text-xs">SevaNetz Protocol</h4>
                         <ul className="space-y-5">
                             <li><a href="#" className="text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary transition-colors" /> Pilot Program</a></li>
                             <li><a href="#" className="text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-primary/20 group-hover:bg-primary transition-colors" /> AI Matching</a></li>
@@ -42,16 +42,16 @@ export default function Footer() {
                         <h4 className="text-slate-900 font-bold mb-8 uppercase tracking-widest text-xs">Inquiries</h4>
                         <div className="space-y-6">
                             <p className="text-slate-500 text-sm">Interested in becoming a pilot partner?</p>
-                            <a href="mailto:pilot@refood.ai" className="flex items-center gap-3 text-primary font-bold hover:underline">
+                            <a href="mailto:preetham.s@bcah.christuniversity.in" className="flex items-center gap-3 text-primary font-bold hover:underline">
                                 <Mail size={18} />
-                                pilot@refood.ai
+                                preeaacharya@iee.org
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div className="pt-10 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-8">
-                    <p className="text-sm font-medium text-slate-400">© 2026 ReFood Technologies. A Visionary Prototype.</p>
+                    <p className="text-sm font-medium text-slate-400">© 2026 SevaNetz Technologies. A Visionary Prototype.</p>
                     <div className="flex gap-10 text-sm font-semibold text-slate-400">
                         <a href="#" className="hover:text-primary transition-colors">Vision Design</a>
                         <a href="#" className="hover:text-primary transition-colors">Privacy</a>

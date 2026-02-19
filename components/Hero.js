@@ -113,7 +113,7 @@ export default function Hero() {
                         <div className="glass rounded-[3rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.1)] border border-white/40 ring-1 ring-black/5">
                             <div className="bg-white/50 p-10 border-b border-primary/5">
                                 <div className="flex justify-between items-center mb-10">
-                                    <span className="font-bold text-slate-400 tracking-widest text-xs uppercase">Intelligent Protocol</span>
+                                    <span className="font-bold text-slate-400 tracking-widest text-xs uppercase">SevaNetz Protocol</span>
                                     <div className="flex items-center gap-2">
                                         <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                                         <span className="text-[10px] text-primary font-bold uppercase tracking-tighter">Live matching</span>

@@ -30,7 +30,7 @@ export default function HowItWorks() {
             <div className="container mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
                     <div className="max-w-xl">
-                        <span className="text-secondary font-bold uppercase text-sm mb-4 block">The Protocol</span>
+                        <span className="text-secondary font-bold uppercase text-sm mb-4 block">SevaNetz Protocol</span>
                         <h2 className="text-4xl md:text-5xl font-bold italic">How the Vision functions.</h2>
                     </div>
                     <p className="text-foreground/60 max-w-sm mb-2">

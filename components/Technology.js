@@ -53,15 +53,6 @@ export default function Technology() {
                 </div>
 
                 <div className="relative">
-                    {/* Animated Line */}
-                    <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-white/20 -translate-y-1/2 z-0 overflow-hidden">
-                        <motion.div
-                            initial={{ left: "0%" }}
-                            animate={{ left: "calc(100% - 6rem)" }}
-                            transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatType: "reverse" }}
-                            className="absolute top-0 w-24 h-full bg-secondary shadow-[0_0_15px_#F28C28]"
-                        />
-                    </div>
 
                     <div className="grid md:grid-cols-3 gap-12 relative z-10">
                         {steps.map((step, i) => (

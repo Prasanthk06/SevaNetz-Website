@@ -46,7 +46,7 @@ export default function Team() {
                     <motion.h2
                         initial="hidden"
                         whileInView="show"
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.3 }}
                         variants={{
                             hidden: { opacity: 0 },
                             show: { opacity: 1, transition: { staggerChildren: 0.1 } }
@@ -56,7 +56,21 @@ export default function Team() {
                         {"The Minds Behind SevaNetz".split(" ").map((word, i) => (
                             <span key={i} className="inline-block mr-2">
                                 {word.split("").map((char, j) => (
-                                    <motion.span key={j} variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }}>{char}</motion.span>
+                                    <motion.span 
+                                        key={j} 
+                                        variants={{ 
+                                            hidden: { opacity: 0, y: 10 }, 
+                                            show: { 
+                                                opacity: 1, 
+                                                y: 0,
+                                                transition: {
+                                                    duration: 0.3
+                                                }
+                                            } 
+                                        }}
+                                    >
+                                        {char}
+                                    </motion.span>
                                 ))}
                             </span>
                         ))}
@@ -84,11 +98,18 @@ export default function Team() {
                             key={i}
                             variants={{
                                 hidden: { opacity: 0, y: 30, scale: 0.95 },
-                                show: { opacity: 1, y: 0, scale: 1 }
+                                show: { 
+                                    opacity: 1, 
+                                    y: 0, 
+                                    scale: 1,
+                                    transition: {
+                                        duration: 0.8, 
+                                        ease: [0.16, 1, 0.3, 1]
+                                    }
+                                }
                             }}
-                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         >
-                            <Card className={`group relative p-0 overflow-hidden !rounded-[2.5rem] bg-white border ${member.color} hover:shadow-2xl transition-all duration-500 hover:-translate-y-2`}>
+                            <Card className={`group relative p-0 overflow-hidden rounded-[2.5rem] bg-white border ${member.color} hover:shadow-2xl transition-all duration-500 hover:-translate-y-2`}>
                                 <div className="p-8 pb-0 flex justify-center">
                                     <div className="relative">
                                         <div className="absolute inset-0 bg-primary/10 rounded-full blur-xl scale-125 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

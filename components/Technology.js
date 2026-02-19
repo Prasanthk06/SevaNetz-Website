@@ -17,7 +17,7 @@ export default function Technology() {
                     <motion.h2
                         initial="hidden"
                         whileInView="show"
-                        viewport={{ once: true }}
+                        viewport={{ once: true, amount: 0.3 }}
                         variants={{
                             hidden: { opacity: 0 },
                             show: {
@@ -30,7 +30,21 @@ export default function Technology() {
                         className="text-4xl md:text-5xl font-bold mb-6 italic"
                     >
                         {"Engineering the Food Loop".split("").map((char, i) => (
-                            <motion.span key={i} variants={{ hidden: { opacity: 0, x: -10 }, show: { opacity: 1, x: 0 } }}>{char}</motion.span>
+                            <motion.span
+                                key={i}
+                                variants={{
+                                    hidden: { opacity: 0, x: -10 },
+                                    show: {
+                                        opacity: 1,
+                                        x: 0,
+                                        transition: {
+                                            duration: 0.3
+                                        }
+                                    }
+                                }}
+                            >
+                                {char}
+                            </motion.span>
                         ))}
                     </motion.h2>
                     <p className="text-lg opacity-80">
@@ -40,10 +54,11 @@ export default function Technology() {
 
                 <div className="relative">
                     {/* Animated Line */}
-                    <div className="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-white/20 -translate-y-1/2 z-0">
+                    <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-white/20 -translate-y-1/2 z-0 overflow-hidden">
                         <motion.div
-                            animate={{ left: ["0%", "100%"] }}
-                            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                            initial={{ left: "0%" }}
+                            animate={{ left: "calc(100% - 6rem)" }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatType: "reverse" }}
                             className="absolute top-0 w-24 h-full bg-secondary shadow-[0_0_15px_#F28C28]"
                         />
                     </div>
@@ -54,8 +69,9 @@ export default function Technology() {
                                 key={i}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.2 }}
-                                className="glass !bg-white/10 border-white/20 p-8 rounded-4xl text-center backdrop-blur-md"
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ delay: i * 0.2, duration: 0.5, ease: "easeOut" }}
+                                className="glass bg-white/10 border-white/20 p-8 rounded-4xl text-center backdrop-blur-md"
                             >
                                 <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 text-white shadow-lg">
                                     {step.icon}

@@ -4,25 +4,30 @@ import Card from "./ui/Card";
 import { motion } from "framer-motion";
 import { Smartphone, Layout, PieChart } from "lucide-react";
 
+// Import screenshots
+import scannerImg from "../assets/WhatsApp Image 2026-02-20 at 08.43.53 (2).jpeg";
+import mapImg from "../assets/WhatsApp Image 2026-02-20 at 08.43.53 (1).jpeg";
+import profileImg from "../assets/WhatsApp Image 2026-02-20 at 08.43.53.jpeg";
+
 export default function Demo() {
     const screens = [
         {
             title: "Visionary Scanner",
             desc: "Using computer vision to scan surplus and instantly generate nutritional profiles and safety logs.",
             icon: <Smartphone className="text-primary" size={24} />,
-            placeholder: "AI Scanner Screenshot"
+            image: scannerImg
         },
         {
             title: "AI Matching Grid",
             desc: "Real-time visualization of a city's food loop and optimized demand matching.",
             icon: <Layout className="text-secondary" size={24} />,
-            placeholder: "Matching Interface Screenshot"
+            image: mapImg
         },
         {
             title: "Impact Analytics",
             desc: "Granular data insights for partners to track their mission progress.",
             icon: <PieChart className="text-primary" size={24} />,
-            placeholder: "Analytics Dashboard Screenshot"
+            image: profileImg
         }
     ];
 
@@ -67,17 +72,19 @@ export default function Demo() {
                             className="group"
                         >
                             <Card className="mb-8 p-0 overflow-hidden !rounded-[2.5rem] border-primary/5 hover:border-primary/20 transition-all duration-500 shadow-sm hover:shadow-xl hover:-translate-y-2">
-                                <div className="aspect-[9/16] bg-white flex items-center justify-center relative overflow-hidden">
+                                <div className="aspect-[9/16] bg-slate-50 flex items-center justify-center relative overflow-hidden">
                                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 group-hover:opacity-100 opacity-50 transition-opacity" />
 
                                     <motion.div
                                         initial={{ scale: 1 }}
                                         whileHover={{ scale: 1.05 }}
-                                        className="relative z-10 w-full h-full flex items-center justify-center"
+                                        className="relative z-10 w-full h-full"
                                     >
-                                        <span className="text-slate-400 font-bold uppercase tracking-widest text-[10px] text-center px-4 py-2 border border-slate-100 rounded-full bg-white/80 backdrop-blur-sm shadow-sm group-hover:scale-110 transition-transform duration-500">
-                                            {screen.placeholder}
-                                        </span>
+                                        <img
+                                            src={screen.image.src || screen.image}
+                                            alt={screen.title}
+                                            className="w-full h-full object-cover"
+                                        />
                                     </motion.div>
 
                                     {/* Decorative elements */}

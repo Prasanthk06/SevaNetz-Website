@@ -24,10 +24,16 @@ export default function CTA() {
                         We are looking for visionary partners to help us shape the first iteration of the SevaNetz protocol.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                        <Button variant="secondary" className="!px-10 !py-4 text-lg flex items-center gap-2">
-                            <Download size={20} />
-                            Download App
-                        </Button>
+                        <a
+                            href="https://drive.google.com/uc?export=download&id=1BveCVM4v5MRoFeJ0qtca_E9LdoQhVFOm"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Button variant="secondary" className="!px-10 !py-4 text-lg flex items-center gap-2">
+                                <Download size={20} />
+                                Download App
+                            </Button>
+                        </a>
                         <Button className="glass !bg-white/10 !text-white border-white/20 !px-10 !py-4 text-lg">Inquire for Pilot</Button>
                     </div>
                 </div>

@@ -25,7 +25,7 @@ export default function CTA() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <a
-                            href="https://drive.google.com/uc?export=download&id=1BveCVM4v5MRoFeJ0qtca_E9LdoQhVFOm"
+                            href="https://drive.google.com/uc?export=download&id=1AbBNEv-TvGEtml9ZqNOkN4_Nk2gdobeh"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
